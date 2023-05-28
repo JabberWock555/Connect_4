@@ -1,28 +1,43 @@
 #include<iostream>
-#include <vector>
+#include "Setup.cpp"
 using namespace std;
 
-void printBoard(vector< vector<char> > &board, int m ,int n){
+GameManager::GameManager(){
+
+    char **Board = new char*[rows];
+    for (int i = 0; i < rows; i++){
+        Board[i] = new char[cols];
+    }
+}
+
+void GameManager:: Instructions(){};
+
+bool GameManager::isP1turn(){
+    return p1Turn;
+}
+
+void GameManager::displayBoard(){
+
     cout<<" "; 
-    for(int k = 0; k < n; k++){
+    for(int k = 0; k < cols; k++){
         cout<<" ("<<k+1<<")";
     }
     cout<<endl;
-    for(int i = 0; i < m; i++){
-        for(int j = 0; j < n; j++){
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
             cout<<" | ";
-            cout<<board[i][j];
+            cout<<Board[i][j];
         }
         cout<<" | "<<endl;
     }
     
-}
-int main()
-{
-    int m = 6, n = 7;
     
-    vector < vector<char> > Board( m , vector<char> (n, ' ')); 
-    printBoard(Board, m, n);
+}
 
-    return 0;
+void GameManager:: changeTurn(){
+    if(isP1turn){
+        p1Turn = false;
+    }else{
+        p1Turn = true;
+    }
 }
