@@ -1,5 +1,5 @@
 # Connect_4
- ## Text-Based Connect-4 Game
+ # Text-Based Connect-4 Game
 
 ![https---image roku com-developer_channels-prod-3c3c8027910a2d232d52ac704f08175b4d18479b205eb57c3289caa7c6719332](https://github.com/JabberWock555/Connect_4/assets/97807224/a7e29ffd-bd8c-48ae-93f0-ea59a374c4ad)
 
