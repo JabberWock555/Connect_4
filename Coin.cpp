@@ -1,19 +1,35 @@
 #include<iostream>
-#include "Setup.cpp"
+
 using namespace std;
 
-Coin::Coin(){
+enum coin{
+    Empty,
+    Red, 
+    Blue
+};
+
+
+class Coin{
+
+    coin Token;
+
+    public:
+
+    Coin(){
 
     Token = Empty;
 
 }
 
-coin Coin::getToken(){
+coin GetToken()
+{
     return Token;
 }
 
-void Coin::setToken(coin Token){
+void SetToken(coin token_){
 
-    this->Token = Token;
+    Token = token_;
 
 }
+
+};
