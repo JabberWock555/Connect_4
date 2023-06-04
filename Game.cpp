@@ -38,10 +38,10 @@ int main()
             switch (gameManager.getGameStatus()){
 
                 case Red_Win:
-                    cout<<"\n\nWinner --->  Player 1 (RED)!!!\n"<<endl;
+                    cout<<"\n\n***  Winner --->  Player 1 (RED)!!!\n"<<endl;
                     break;
                 case Blue_Win:
-                    cout<<"\n\nWinner --->  Player 2 (BLUE)!!\n"<<endl;
+                    cout<<"\n\n***  Winner --->  Player 2 (BLUE)!!\n"<<endl;
                     break;
                 case Draw:
                     cout<<"\n\nIts a Draw!\n"<<endl;
@@ -51,12 +51,13 @@ int main()
 
             }
             
-            gameManager.displayBoard();
             break;
         }
 
         gameManager.changeTurn();
     }
+
+    cout<<"\n\nThanks for Playing!\n\n";
 
     return 0;
 }
