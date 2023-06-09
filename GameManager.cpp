@@ -104,7 +104,7 @@ class GameManager{
         }
 
         //4th Quad
-        for(int i = row_, j = col_; i<MaxRows && j > 0; i++, j--){
+        for(int i = row_, j = col_; i<MaxRows && j >= 0; i++, j--){
             if(Token == Board[i][j].GetToken()){
                 count++;
                 if (count == MaxWin){
